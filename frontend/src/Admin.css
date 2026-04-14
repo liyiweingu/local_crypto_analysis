@@ -1,0 +1,251 @@
+.admin-container {
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #e0e3eb;
+  padding-bottom: 20px;
+}
+
+.admin-header h1 {
+  margin: 0;
+  color: #131722;
+}
+
+.back-link {
+  color: #2962FF;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #2962FF;
+  transition: all 0.2s;
+}
+
+.back-link:hover {
+  background: #2962FF;
+  color: white;
+}
+
+.admin-section {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 40px;
+}
+
+.admin-section h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #131722;
+}
+
+.section-desc {
+  color: #787B86;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.admin-form {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.admin-form input {
+  padding: 10px 15px;
+  border: 1px solid #e0e3eb;
+  border-radius: 6px;
+  font-size: 14px;
+  flex: 1;
+  min-width: 200px;
+  transition: border-color 0.2s;
+}
+
+.admin-form input:focus {
+  outline: none;
+  border-color: #2962FF;
+}
+
+.admin-form button {
+  padding: 10px 20px;
+  background-color: #089981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.admin-form button:hover {
+  background-color: #067e6a;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th, .admin-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e3eb;
+}
+
+.admin-table th {
+  color: #787B86;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.admin-table td {
+  color: #131722;
+  font-size: 15px;
+}
+
+.admin-table code {
+  background: #f1f3f6;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.delete-btn {
+  background: transparent;
+  color: #F23645;
+  border: 1px solid #F23645;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.delete-btn:hover {
+  background: #F23645;
+  color: white;
+}
+
+.prompts-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.prompt-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.prompt-label {
+  font-weight: 600;
+  color: #131722;
+  font-size: 14px;
+}
+
+.prompt-desc {
+  font-weight: normal;
+  color: #787B86;
+  font-size: 13px;
+  margin-left: 8px;
+}
+
+.prompt-textarea {
+  width: 100%;
+  min-height: 60px;
+  padding: 10px;
+  border: 1px solid #e0e3eb;
+  border-radius: 6px;
+  font-size: 14px;
+  resize: vertical;
+  font-family: inherit;
+  color: #131722;
+  box-sizing: border-box;
+}
+
+.prompt-textarea:focus {
+  outline: none;
+  border-color: #2962FF;
+}
+
+.prompts-form button[type="submit"] {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background-color: #2962FF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  margin-top: 10px;
+}
+
+.prompts-form button[type="submit"]:hover {
+  background-color: #1E4BD8;
+}
+
+.ai-config-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+}
+
+.ai-config-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ai-config-form label {
+  font-weight: 500;
+  color: #131722;
+  font-size: 14px;
+}
+
+.ai-config-form input {
+  padding: 10px 15px;
+  border: 1px solid #e0e3eb;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ai-config-form input:focus {
+  outline: none;
+  border-color: #2962FF;
+}
+
+.ai-config-form button[type="submit"] {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background-color: #2962FF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  margin-top: 10px;
+}
+
+.ai-config-form button[type="submit"]:hover {
+  background-color: #1E4BD8;
+}

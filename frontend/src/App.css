@@ -1,0 +1,510 @@
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 24px;
+}
+
+.admin-link {
+  margin-left: auto;
+  text-decoration: none;
+  color: #089981;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: 1px solid #089981;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.admin-link:hover {
+  background: #089981;
+  color: white;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.interval-controls {
+  display: flex;
+  background-color: #f1f3f6;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.interval-btn {
+  background: transparent;
+  border: none;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #787B86;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.interval-btn:hover {
+  color: #131722;
+}
+
+.interval-btn.active {
+  background-color: #fff;
+  color: #2962FF;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.symbol-control select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.main-content {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  padding: 20px;
+  min-height: 600px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  font-size: 18px;
+  color: #666;
+}
+
+.error {
+  padding: 20px;
+  background-color: #ffebee;
+  color: #c62828;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.analysis-panel {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #e0e3eb;
+}
+
+.analysis-panel h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #131722;
+  border-bottom: 1px solid #e0e3eb;
+  padding-bottom: 12px;
+}
+
+.status-cards {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.card {
+  flex: 1;
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-label {
+  font-size: 14px;
+  color: #787B86;
+}
+
+.card-value {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.bullish { color: #089981; }
+.bearish { color: #F23645; }
+.neutral { color: #B2B5BE; }
+
+.action-买入 { color: #089981; }
+.action-卖出 { color: #F23645; }
+.action-观望 { color: #2962FF; }
+
+.risk-warning {
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  border-left: 4px solid #2962FF;
+  margin-bottom: 20px;
+  border-top: 1px solid #e0e3eb;
+  border-right: 1px solid #e0e3eb;
+  border-bottom: 1px solid #e0e3eb;
+}
+
+.risk-warning h3 {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  color: #131722;
+}
+
+.strategy-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.strategy-list li {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #131722;
+}
+
+.strategy-list .label {
+  color: #787B86;
+  font-weight: 500;
+  margin-right: 8px;
+  display: inline-block;
+  min-width: 110px;
+}
+
+.strategy-list .value {
+  font-weight: bold;
+  color: #131722;
+}
+
+.strategy-list .reason {
+  color: #787B86;
+  font-size: 13px;
+  margin-left: 8px;
+  font-style: italic;
+}
+
+.strategy-list .risk-text {
+  color: #F23645;
+  font-weight: 500;
+}
+
+.indicators-detail {
+  background: #fff;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border: 1px solid #e0e3eb;
+}
+
+.indicators-detail h3 {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  color: #131722;
+}
+
+.indicators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.indicator-group h4 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #2962FF;
+}
+
+.indicator-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.indicator-group li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.indicator-group .label {
+  color: #787B86;
+  display: flex;
+  align-items: center;
+}
+
+.info-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #E0E3EB;
+  color: #787B86;
+  font-size: 10px;
+  margin-left: 6px;
+  cursor: help;
+  position: relative;
+}
+
+.info-icon:hover {
+  background-color: #2962FF;
+  color: white;
+}
+
+.info-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #131722;
+  color: white;
+  text-align: left;
+  padding: 8px 12px;
+  border-radius: 6px;
+  width: max-content;
+  max-width: 250px;
+  font-size: 12px;
+  line-height: 1.4;
+  z-index: 100;
+  transition: opacity 0.2s, visibility 0.2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  font-weight: normal;
+  pointer-events: none;
+}
+
+.info-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #131722 transparent transparent transparent;
+}
+
+.info-icon:hover .info-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.indicator-group .value {
+  font-weight: 500;
+  font-family: monospace;
+  color: #131722;
+}
+
+.news-and-whales {
+  display: flex;
+  gap: 20px;
+}
+
+.news-section {
+  flex: 1;
+}
+
+.news-section h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #131722;
+}
+
+.whale-section h3 {
+  color: #2962FF;
+}
+
+.whale-item {
+  border-left: 3px solid #2962FF;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+.timeline-item {
+  display: flex;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.timeline-time {
+  width: 50px;
+  flex-shrink: 0;
+  font-size: 12px;
+  color: #787B86;
+  padding-top: 2px;
+  text-align: right;
+  padding-right: 15px;
+}
+
+.timeline-marker {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #E0E3EB;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px #e0e3eb;
+  margin-top: 4px;
+  z-index: 2;
+}
+
+.timeline-marker.whale-marker {
+  background: #2962FF;
+  box-shadow: 0 0 0 1px #2962FF;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: 65px; /* 50px + 15px pr - 10px center */
+  top: 16px;
+  bottom: -4px;
+  width: 2px;
+  background-color: #f1f3f6;
+  z-index: 1;
+}
+
+.timeline-item:last-child::after {
+  display: none;
+}
+
+.timeline-content {
+  flex: 1;
+  padding-left: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: white;
+  margin-left: 10px;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  min-height: 48px; /* 设置最小高度以保证行高一致 */
+}
+
+.timeline-content a {
+  color: #131722;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.4;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 限制最多显示2行 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.3s ease;
+}
+
+.timeline-content a.expanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.timeline-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.expand-btn {
+  background: none;
+  border: none;
+  color: #2962FF;
+  font-size: 12px;
+  padding: 4px 0 0 0;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+.expand-btn:hover {
+  text-decoration: underline;
+}
+
+.timeline-content a:hover {
+  color: #2962FF;
+}
+
+.whale-content {
+  border-left: 3px solid #2962FF;
+}
+
+.sentiment-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  white-space: nowrap;
+  margin-top: 2px;
+}
+
+.sentiment-positive { background-color: #089981; }
+.sentiment-negative { background-color: #F23645; }
+.sentiment-neutral { background-color: #B2B5BE; }
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+
+.load-more-btn {
+  background: transparent;
+  border: 1px solid #2962FF;
+  color: #2962FF;
+  padding: 8px 24px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.load-more-btn:hover {
+  background: #2962FF;
+  color: white;
+}
