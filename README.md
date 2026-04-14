@@ -4,12 +4,13 @@
 这是一个全栈虚拟币趋势预测与看板工具。项目集成了币安 (Binance) K线数据、技术指标计算 (Pandas-TA)、新闻情绪分析、巨鲸链上动向追踪，并基于这些维度生成智能交易指南（评分、买卖建议、止损止盈）。同时附带一个管理后台用于动态调整指标、新闻源和提示词模板，并支持历史数据回测以验证模型胜率。
 ##页面展示
 ### 前端
-<img width="830" height="846" alt="image" src="https://github.com/user-attachments/assets/5d02ac4a-5bfc-44ce-b5f6-b4be6e9dd8e5" />
+
+<img width="415" height="423" alt="image" src="https://github.com/user-attachments/assets/5d02ac4a-5bfc-44ce-b5f6-b4be6e9dd8e5" />
 <img width="766" height="646" alt="image" src="https://github.com/user-attachments/assets/5d68533f-b41a-47e6-b92a-081a234677ce" />
 
 ### 后台
-<img width="733" height="924" alt="image" src="https://github.com/user-attachments/assets/aa267de0-43c0-4b58-9522-392ed4a1d4d3" />
-<img width="628" height="956" alt="image" src="https://github.com/user-attachments/assets/69d8322c-347f-4987-b700-abbaf28ede9e" />
+<img width="366" height="462" alt="image" src="https://github.com/user-attachments/assets/aa267de0-43c0-4b58-9522-392ed4a1d4d3" />
+<img width="314" height="473" alt="image" src="https://github.com/user-attachments/assets/69d8322c-347f-4987-b700-abbaf28ede9e" />
 
 
 ## 技术栈
