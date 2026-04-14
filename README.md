@@ -2,6 +2,15 @@
 
 ## 简介
 这是一个全栈虚拟币趋势预测与看板工具。项目集成了币安 (Binance) K线数据、技术指标计算 (Pandas-TA)、新闻情绪分析、巨鲸链上动向追踪，并基于这些维度生成智能交易指南（评分、买卖建议、止损止盈）。同时附带一个管理后台用于动态调整指标、新闻源和提示词模板，并支持历史数据回测以验证模型胜率。
+##页面展示
+### 前端
+<img width="830" height="846" alt="image" src="https://github.com/user-attachments/assets/5d02ac4a-5bfc-44ce-b5f6-b4be6e9dd8e5" />
+<img width="766" height="646" alt="image" src="https://github.com/user-attachments/assets/5d68533f-b41a-47e6-b92a-081a234677ce" />
+
+### 后台
+<img width="733" height="924" alt="image" src="https://github.com/user-attachments/assets/aa267de0-43c0-4b58-9522-392ed4a1d4d3" />
+<img width="628" height="956" alt="image" src="https://github.com/user-attachments/assets/69d8322c-347f-4987-b700-abbaf28ede9e" />
+
 
 ## 技术栈
 *   **前端**：React 18 + Vite + React Router + ECharts (K线及技术指标可视化)
@@ -99,6 +108,17 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ### 3. 策略回测 (Backtesting)
 如果您需要验证当前评分模型与策略的准确性，可以运行后端的回测脚本。该脚本会自动倒推最近 30 天的数据进行模拟推演。
 ```bash
+回测结果（默认配置）：针对最近 30 天（24h 趋势预测）的模拟回测结果如下：
+
+- 测试周期 ：最近 30 天
+- 有效信号天数 ：28 天（买入/卖出信号触发频率较高）
+- 成功预测天数 ：12 天
+- 预测胜率 ： 42.86% (基于纯技术面规则 + 情绪加权)
+- 回测观察 ：
+  - 在 3 月中旬的震荡行情中，模型表现出较强的“观望”保护机制。
+  - 3 月底至 4 月初的下跌趋势中，模型成功捕捉到了多次“卖出”信号，有效规避了回调。
+  - 近期（4 月 10 日 - 11 日）的上涨行情中，模型给出的“买入”建议均实现了收盘浮盈。
+
 cd backend
 source venv/bin/activate
 python tests/backtest.py
@@ -108,3 +128,4 @@ python tests/backtest.py
 *   将历史数据喂给交易评分模型，计算出“买入/卖出/观望”操作建议。
 *   将该建议与 T+1 日的实际高低点及收盘价进行验证（例如买入建议需在 T+1 日收盘浮盈或触及止盈线）。
 *   最后输出详细的每天预测结果及 30 天的总预测胜率。
+  
